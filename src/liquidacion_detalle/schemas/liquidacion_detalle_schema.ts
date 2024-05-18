@@ -10,6 +10,9 @@ export class LiquidacionDetalle extends Document {
     tipo_concepto_id: number;
 
     @Prop({ required: true })
+    concepto_id: number;
+
+    @Prop({ required: true })
     valor: number;
 
     @Prop({ required: true })
@@ -22,7 +25,7 @@ export class LiquidacionDetalle extends Document {
     fecha_modificacion: Date
 
     @Prop({ required: true })
-    liquidacionbid: number
+    liquidacionbid: string
 
 }
 

@@ -610,6 +610,9 @@
                     "tipo_concepto_id": {
                         "type": "number"
                     },
+                    "concepto_id": {
+                        "type": "number"
+                    },
                     "valor": {
                         "type": "number"
                     },
@@ -625,11 +628,12 @@
                         "type": "string"
                     },
                     "liquidacionbid": {
-                        "type": "number"
+                        "type": "string"
                     }
                 },
                 "required": [
                     "tipo_concepto_id",
+                    "concepto_id",
                     "valor",
                     "activo",
                     "fecha_creacion",

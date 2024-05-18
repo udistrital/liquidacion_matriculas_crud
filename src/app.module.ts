@@ -17,7 +17,10 @@ import { LiquidacionDescuentoModule } from './liquidacion_detalle/liquidacion_de
       envFilePath: '.env',
       isGlobal: true
     }),
-    MongooseModule.forRoot('mongodb://jose2:123456789@localhost:27017/matriculas',{
+    // MongooseModule.forRoot('mongodb://jose2:123456789@localhost:27017/matriculas',{
+    //   family:4
+    // })
+    MongooseModule.forRoot('mongodb+srv://limaszandresfelipe:Ln8UZQzAVeglfcTv@cluster0.clh1hsz.mongodb.net/liquidacion_matricula?retryWrites=true&w=majority&appName=Cluster0',{
       family:4
     })
     ],

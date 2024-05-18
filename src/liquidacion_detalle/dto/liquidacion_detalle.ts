@@ -8,6 +8,9 @@ export class LiquidacionDetalleDto {
     readonly tipo_concepto_id: number;
 
     @ApiProperty()
+    readonly concepto_id: number;
+
+    @ApiProperty()
     readonly valor: number;
 
     @ApiProperty()
@@ -20,5 +23,5 @@ export class LiquidacionDetalleDto {
     fecha_modificacion: Date;
 
     @ApiProperty()
-    readonly liquidacionbid: number;
+    readonly liquidacionbid: string;
 }

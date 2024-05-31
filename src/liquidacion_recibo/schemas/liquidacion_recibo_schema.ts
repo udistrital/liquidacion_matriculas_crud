@@ -7,7 +7,7 @@ export class LiquidacionRecibo extends Document {
 
 
     @Prop({ required: false })
-    recibo_id: number;
+    recibo_id: string;
 
     @Prop({ required: true })
     activo: boolean
@@ -19,7 +19,7 @@ export class LiquidacionRecibo extends Document {
     fecha_modificacion: Date
 
     @Prop({ required: true })
-    liquidacion_id: number
+    liquidacion_id: string
 
 }
 

@@ -40,6 +40,17 @@ export class LiquidacionReciboService {
         };
     }
 
+    async getByLiquidacionId(id: string): Promise<LiquidacionRecibo> {
+        try {
+            return await this.tipoPlanModel.findOne({ 
+                liquidacion_id: id,
+                activo: true
+            }).exec();
+        } catch (error) {
+            return null;
+        };
+    }
+
     async put(id: string, dto: LiquidacionaReciboDto): Promise<LiquidacionRecibo> {
         try {
             dto.fecha_modificacion = new Date();

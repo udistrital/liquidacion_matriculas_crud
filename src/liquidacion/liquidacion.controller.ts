@@ -55,6 +55,19 @@ export class LiquidacionController {
       });
   }
 
+  @Get('/tercero/:tercero_id')
+  async getByTerceroId(@Res() res, @Param('tercero_id') id: string) {
+
+    const tipoPlan = await this.liquidacionService.getByTerceroId(id);
+    res.status(HttpStatus.OK).json(
+      {
+        Data: tipoPlan ? tipoPlan : null,
+        Message: "Request succesfull",
+        Status: "200",
+        Success: true
+      });
+  }
+
   @Put('/:id')
   async put(@Res() res, @Param('id') id: string, @Body() dto: LiquidacionDto) {
 

@@ -17,7 +17,7 @@ import { LiquidacionDescuentoModule } from './liquidacion_detalle/liquidacion_de
       envFilePath: '.env',
       isGlobal: true
     }),
-    MongooseModule.forRoot('mongodb://jose2:123456789@localhost:27017/matriculas',{
+    MongooseModule.forRoot('mongodb://jared:123456789@localhost:27017/',{
       family:4
     })
     ],

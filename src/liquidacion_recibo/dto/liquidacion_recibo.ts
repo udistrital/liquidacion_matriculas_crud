@@ -5,7 +5,7 @@ export class LiquidacionaReciboDto {
 
 
     @ApiProperty()
-    readonly recibo_id: number;
+    readonly recibo_id: string;
 
     @ApiProperty()
     readonly activo: boolean;
@@ -17,5 +17,5 @@ export class LiquidacionaReciboDto {
     fecha_modificacion: Date;
 
     @ApiProperty()
-    liquidacion_id: number;
+    liquidacion_id: string;
 }

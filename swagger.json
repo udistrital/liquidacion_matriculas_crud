@@ -187,6 +187,29 @@
                 ]
             }
         },
+        "/liquidacion/tercero/{tercero_id}": {
+            "get": {
+                "operationId": "LiquidacionController_getByTerceroId",
+                "parameters": [
+                    {
+                        "name": "tercero_id",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "liquidacion"
+                ]
+            }
+        },
         "/liquidacion-recibo": {
             "post": {
                 "operationId": "LiquidacionConceptoController_post",
@@ -345,6 +368,29 @@
                 "parameters": [
                     {
                         "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "liquidacion-recibo"
+                ]
+            }
+        },
+        "/liquidacion-recibo/recibo/{liquidacion_id}": {
+            "get": {
+                "operationId": "LiquidacionConceptoController_getByLiquidacionId",
+                "parameters": [
+                    {
+                        "name": "liquidacion_id",
                         "required": true,
                         "in": "path",
                         "schema": {
@@ -579,7 +625,7 @@
                 "type": "object",
                 "properties": {
                     "recibo_id": {
-                        "type": "number"
+                        "type": "string"
                     },
                     "activo": {
                         "type": "boolean"
@@ -593,7 +639,7 @@
                         "type": "string"
                     },
                     "liquidacion_id": {
-                        "type": "number"
+                        "type": "string"
                     }
                 },
                 "required": [

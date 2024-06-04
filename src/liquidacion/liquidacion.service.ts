@@ -39,6 +39,17 @@ export class LiquidacionService {
         };
     }
 
+    async getByTerceroId(id: string): Promise<Liquidacion> {
+        try {
+            return await this.tipoPlanModel.findOne({ 
+                tercero_id: id,
+                activo: true
+            }).exec();
+        } catch (error) {
+            return null;
+        };
+    }
+
     async put(id: string, dto: LiquidacionDto): Promise<Liquidacion> {
         try {
             dto.fecha_modificacion = new Date();

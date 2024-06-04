@@ -57,6 +57,19 @@ export class LiquidacionConceptoController {
         });
     }
 
+    @Get('/recibo/:liquidacion_id')
+    async getByLiquidacionId(@Res() res, @Param('liquidacion_id') id: string) {
+  
+      const tipoPlan = await this.liquidacionReciboService.getByLiquidacionId(id);
+      res.status(HttpStatus.OK).json(
+        {
+          Data: tipoPlan ? tipoPlan : null,
+          Message: "Request succesfull",
+          Status: "200",
+          Success: true
+        });
+    }
+
     
   @Put('/:id')
   async put(@Res() res, @Param('id') id: string, @Body() dto:LiquidacionaReciboDto) {
